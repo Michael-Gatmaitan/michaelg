@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Michael | Front end developer",
   description:
     "Portfolio website highlighting Michael's journey to web development.",
+  icons: "https://michaelgatmaitan.netlify.app/logo512.png"
 };
 
 export default function RootLayout({
