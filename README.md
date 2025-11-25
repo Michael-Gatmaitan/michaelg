@@ -4,6 +4,12 @@ Welcome! 👋 This is my personal portfolio website showcasing my projects, skil
 
 ---
 
+## ✨ Live Demo
+
+You can view the deployed portfolio here: [https://michaelg.vercel.app](https://michaelg.vercel.app)
+
+---
+
 ## 🚀 Getting Started
 
 Follow these steps to clone and run the project locally.
