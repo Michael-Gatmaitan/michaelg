@@ -84,7 +84,15 @@ const projects: IProject[] = [
     tags: [ToolTags.React, ToolTags.ReactQuery],
     githubLink: "https://github.com/Michael-Gatmaitan/starwars_react-query",
     liveDemoLink: "https://swarsplanets.netlify.app/",
-  }
+  },
+  {
+    id: 6,
+    title: "Portfolio v1",
+    description: "My first ever website portfolio",
+    tags: [ToolTags.React],
+    githubLink: "https://github.com/Michael-Gatmaitan/michael-gatmaitan-webportfolio",
+    liveDemoLink: "https://michaelgatmaitan.netlify.app/",
+  },
 ]
 
 

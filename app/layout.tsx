@@ -4,21 +4,8 @@ import { ThemeProvider } from "@/lib/theme-provider";
 import "./globals.css";
 import { CursorGradient } from "@/components/CursorGradient";
 import Nav from "@/components/layout/Nav/Nav";
-
 import FooterSection from "@/components/layout/Footer/FooterSection"
 import SideBar from "@/components/layout/Nav/SideBar";
-
-// const montserrat = Montserrat({
-//   variable: "--font-montserrat",
-//   subsets: ["latin"],
-//   display: 'swap',
-// });
-
-// const openSans = Open_Sans({
-//   variable: "--font-open-sans",
-//   subsets: ["latin"],
-//   display: 'swap',
-// });
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,9 +14,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Michael | Product-Focused Engineer",
+  title: "Michael | Front end developer",
   description:
-    "Portfolio website highlighting Michael's product-minded engineering work across web, AI, and design systems.",
+    "Portfolio website highlighting Michael's journey to web development.",
 };
 
 export default function RootLayout({
@@ -37,7 +24,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // ${montserrat.className} ${openSans.variable}
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -48,8 +34,6 @@ export default function RootLayout({
 
           <SideBar />
           <div className="bg-[radial-gradient(circle_at_top,rgba(60,64,198,0.15),transparent_55%)] dark:bg-[radial-gradient(circle_at_top,rgba(144,97,249,0.18),transparent_55%)]">
-            {/* <Nav /> */}
-            {/* <main className="mx-auto flex min-h-screen w-full max-w-4xl flex-col gap-16 px-4 pb-20 pt-12 sm:px-8 lg:px-0"> */}
             <main className="mx-auto min-h-screen w-full max-w-4xl px-4 pb-20 sm:px-8 lg:px-0">
               <Nav />
               {children}
