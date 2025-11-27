@@ -18,7 +18,7 @@ enum ToolTags {
   NextJS = "Next.js",
   React = "React",
   Tailwind = "TailwindCSS",
-  ShadcnUI = "Shadcn UI",
+  ShadcnUI = "Shadcn/ui",
   MaterialUI = "Material UI",
   Redux = "Redux",
   ReactContext = "React Context API",
@@ -63,7 +63,7 @@ const projects: IProject[] = [
     id: 3,
     title: "Kape Ibarra",
     description:
-      "This is a web-based POS & Inventory system of Kape Ibarra. This project is for our SAD (System Analysis & Design).",
+      "A web-based POS & Inventory system of Kape Ibarra. This project is for our SAD (System Analysis & Design).",
     tags: [ToolTags.NextJS, ToolTags.ShadcnUI, ToolTags.Tailwind, ToolTags.Express, ToolTags.Supabase, ToolTags.Prisma],
     githubLink: "https://github.com/Michael-Gatmaitan?tab=repositories&q=Kape-ibarra&type=&language=&sort=",
     liveDemoLink: "https://kapeibarranext.vercel.app/",
@@ -72,7 +72,7 @@ const projects: IProject[] = [
   {
     id: 4,
     title: "AnatoLearn",
-    description: "AnatoLearn is a app that uses 3D models and Augmented Reality for learning human body system. It uses MediaPipe to detect body landmarks and make the 3D model move.",
+    description: "A app that uses 3D models and Augmented Reality for learning human body system. It uses MediaPipe to detect body landmarks and make the 3D model move.",
     tags: [ToolTags.Unity, ToolTags.MediaPipe, ToolTags.AR, ToolTags.Express, ToolTags.Supabase, ToolTags.PostgreSQL],
     githubLink: "https://github.com/Michael-Gatmaitan/AnatoLearn",
     liveDemoLink: "https://anatolearn.netlify.app/",
@@ -88,7 +88,7 @@ const projects: IProject[] = [
   {
     id: 6,
     title: "Portfolio v1",
-    description: "My first ever website portfolio",
+    description: "My first website portfolio",
     tags: [ToolTags.React],
     githubLink: "https://github.com/Michael-Gatmaitan/michael-gatmaitan-webportfolio",
     liveDemoLink: "https://michaelgatmaitan.netlify.app/",

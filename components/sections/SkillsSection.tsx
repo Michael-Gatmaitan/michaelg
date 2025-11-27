@@ -6,19 +6,19 @@ const frontendSkills = [
   "Redux",
   "SCSS",
   "TailwindCSS",
-  "ShadcnUI",
+  "Shadcn/ui",
 ]
 
 const backendSkills = [
   "Node.js (Express.js)",
   "Prisma",
   "Supabase",
-  "PostgreSQL",
 ]
 
 const programmingLanguages = [
   "TypeScript",
   "C#",
+  "Java",
   "Python"
 ]
 
@@ -26,7 +26,8 @@ const tools = [
   "Figma",
   "Git & Github",
   "Postman",
-  "Neovim"
+  "Neovim",
+  "PostgreSQL",
 ]
 
 const SkillsSection = () => {
