@@ -143,7 +143,7 @@ const Project = ({ project }: { project: IProject }) => {
         ))}
       </div>
       <div className="flex gap-2 md:gap-3">
-        <Button variant="secondary" asChild>
+        <Button asChild>
           <Link href={project.liveDemoLink} target="_blank">
             <Eye className="size-4" />
             Live Demo
