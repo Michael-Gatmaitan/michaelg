@@ -26,9 +26,6 @@ const ContactSection = () => {
       <div className="space-y-4">
         <MutedText text="Collaboration" />
         <h2 className="text-3xl font-semibold">Let’s build together</h2>
-        {/* <p className="text-muted-foreground">
-          ...
-        </p> */}
         <div className="flex flex-wrap gap-3">
           {socials.map(({ id, href, Icon }) => (
             <Button key={id} variant="outline" size="icon-lg" asChild>
