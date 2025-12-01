@@ -14,7 +14,7 @@ const experiences = [
 
 const ExperiencesSection = () => {
   return (
-    <section id="experiences" className="space-y-8 border-t border-border/60 pt-8">
+    <section id="experiences" className="space-y-8">
       <div>
         <MutedText text="Experience" />
         {/* <h2 className="text-2xl font-semibold"></h2> */}

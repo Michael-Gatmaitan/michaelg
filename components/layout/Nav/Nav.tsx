@@ -24,7 +24,7 @@ const Nav = () => {
     <nav className="w-full sticky top-0 z-10">
       <div className="mx-auto max-w-7xl py-3">
         {/* Main nav */}
-        <div className="flex items-center p-2 justify-between rounded-xl border border-white/15 bg-white/10 dark:bg-black/20 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+        <div className="flex items-center p-2 justify-between rounded-xl border dark:border-white/15 border-black/15 bg-white/10 dark:bg-black/20 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
           {/* Logo on desktop/tablet (left-aligned) */}
           <MyLogo />
 

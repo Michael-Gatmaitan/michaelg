@@ -74,7 +74,7 @@ const HeaderSection = () => {
           </div>
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <Button variant="outline" asChild>
+            <Button asChild>
               <a
                 href="/resume/MichaelGatmaitan_Resume.pdf"
                 target="_blank"

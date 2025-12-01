@@ -6,7 +6,7 @@ const FooterSection = () => {
       <p>© 2025 Michael Gatmaitan. Crafted in Next.js + shadcn/ui.</p>
       <div className="mt-2 flex items-center justify-center gap-2 text-xs sm:mt-0">
         <Briefcase className="size-3.5" />
-        Actively looking for job.
+        Actively looking for internships.
       </div>
     </footer>
   )

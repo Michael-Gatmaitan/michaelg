@@ -22,7 +22,7 @@ const socials: Socials[] = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="grid gap-8 border-t border-border/60 pt-8 lg:grid-cols-[3fr,2fr]">
+    <section id="contact" className="grid gap-8 lg:grid-cols-[3fr,2fr]">
       <div className="space-y-4">
         <MutedText text="Collaboration" />
         <h2 className="text-3xl font-semibold">Let’s build together</h2>

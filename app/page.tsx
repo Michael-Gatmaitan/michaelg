@@ -6,16 +6,23 @@ import ContactSection from "@/components/sections/ContactSection"
 import PageWrapper from "@/components/page-wrapper"
 import AwardsSection from "@/components/sections/AwardsSection"
 import HobbiesSection from "@/components/sections/HobbiesSection"
+import { Separator } from "@/components/ui/separator"
 
 export default function page() {
   return (
     <PageWrapper>
       <HeaderSection />
+      <Separator />
       <SkillsSection />
+      <Separator />
       <AwardsSection />
+      <Separator />
       <ProjectsSection />
+      <Separator />
       <ExperiencesSection />
+      <Separator />
       <HobbiesSection />
+      <Separator />
       <ContactSection />
     </PageWrapper>
   )

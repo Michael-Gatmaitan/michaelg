@@ -98,7 +98,7 @@ const projects: IProject[] = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="space-y-6 border-t border-border/60 pt-8">
+    <section id="projects" className="space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
           <MutedText text="Projects" />

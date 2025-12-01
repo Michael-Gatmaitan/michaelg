@@ -10,7 +10,7 @@ const ToggleSidebar = () => {
   return (
     <Button
       size="icon"
-      className="inline-flex md:hidden h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/20 text-foreground hover:bg-white/30 active:bg-white/40 dark:bg-black/30 dark:hover:bg-black/40"
+      className="inline-flex md:hidden h-10 w-10 items-center justify-center rounded-md border dark:border-white/20 border-black/20 bg-white/20 text-foreground hover:bg-white/30 active:bg-white/40 dark:bg-black/30 dark:hover:bg-black/40"
       onClick={toggleSidebar}
     >
       <Menu />
