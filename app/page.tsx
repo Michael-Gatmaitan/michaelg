@@ -3,15 +3,17 @@ import SkillsSection from "@/components/sections/SkillsSection"
 import ExperiencesSection from "@/components/sections/ExperiencesSection"
 import ProjectsSection from "@/components/sections/ProjectsSection"
 import ContactSection from "@/components/sections/ContactSection"
-import PageWrapper from "@/components/page-wrapper"
 import AwardsSection from "@/components/sections/AwardsSection"
 import HobbiesSection from "@/components/sections/HobbiesSection"
 import { Separator } from "@/components/ui/separator"
+import { fetchContribution } from "@/lib/github-contribution"
 
 export default function page() {
+  const contributionPromise = fetchContribution();
+
   return (
-    <PageWrapper>
-      <HeaderSection />
+    <div className="flex flex-col w-full gap-16">
+      <HeaderSection githubContributionsPromise={contributionPromise} />
       <Separator />
       <SkillsSection />
       <Separator />
@@ -24,6 +26,6 @@ export default function page() {
       <HobbiesSection />
       <Separator />
       <ContactSection />
-    </PageWrapper>
+    </div>
   )
 }

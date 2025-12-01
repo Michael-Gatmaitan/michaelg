@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import MutedText from "../muted-text";
 import Image from "next/image";
+import { ContributionGraph, ContributionGraphProps } from "../layout/Header/ContributionGraph";
+import { Suspense, use } from "react";
 
 const metrics = [
   { label: "Competition champion", value: "3" },
@@ -54,7 +56,9 @@ const metricItem = {
   },
 };
 
-const HeaderSection = () => {
+const HeaderSection = ({ githubContributionsPromise }: { githubContributionsPromise: Promise<ContributionGraphProps> }) => {
+  const contributionContent = use(githubContributionsPromise);
+
   return (
     <motion.header
       className="flex flex-col gap-8"
@@ -112,6 +116,11 @@ const HeaderSection = () => {
             </Button>
           </div>
         </div>
+
+        <Suspense fallback={<div>Contribution graph loading...</div>}>
+          <ContributionGraph data={contributionContent.data} totalContributions={contributionContent.totalContributions} isLoading={contributionContent.isLoading} />
+        </Suspense>
+
         <motion.div
           className="grid grid-cols-2 gap-6 text-center text-muted-foreground sm:grid-cols-3 sm:text-left"
           variants={metricsContainer}
