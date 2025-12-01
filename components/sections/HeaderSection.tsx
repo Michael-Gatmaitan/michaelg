@@ -9,6 +9,7 @@ import MutedText from "../muted-text";
 import Image from "next/image";
 import { ContributionGraph, ContributionGraphProps } from "../layout/Header/ContributionGraph";
 import { Suspense, use } from "react";
+import { FetchContributionProps } from "@/lib/github-contribution";
 
 const metrics = [
   { label: "Competition champion", value: "3" },
@@ -56,7 +57,7 @@ const metricItem = {
   },
 };
 
-const HeaderSection = ({ githubContributionsPromise }: { githubContributionsPromise: Promise<ContributionGraphProps> }) => {
+const HeaderSection = ({ githubContributionsPromise }: { githubContributionsPromise: FetchContributionProps }) => {
   const contributionContent = use(githubContributionsPromise);
 
   return (
@@ -117,9 +118,15 @@ const HeaderSection = ({ githubContributionsPromise }: { githubContributionsProm
           </div>
         </div>
 
-        <Suspense fallback={<div>Contribution graph loading...</div>}>
-          <ContributionGraph data={contributionContent.data} totalContributions={contributionContent.totalContributions} isLoading={contributionContent.isLoading} />
-        </Suspense>
+        {'data' in contributionContent ? (
+          <Suspense fallback={<div>Contribution graph loading...</div>}>
+            <ContributionGraph
+              data={contributionContent.data}
+              totalContributions={contributionContent.totalContributions}
+              isLoading={contributionContent.isLoading}
+            />
+          </Suspense>
+        ) : <p>{contributionContent.error}</p>}
 
         <motion.div
           className="grid grid-cols-2 gap-6 text-center text-muted-foreground sm:grid-cols-3 sm:text-left"

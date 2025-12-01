@@ -57,7 +57,7 @@ const AwardsSection = () => {
           {awards.map((award) => (
             <div
               key={award.id}
-              className="flex items-center rounded-lg shadow-sm p-4 border-2 border-gray-600/50"
+              className="flex items-center rounded-3xl p-4 border border-gray-400/50 dark:border-gray-600/50 bg-background/60 shadow-[0_0_40px_rgba(0,0,0,0.05)] transition hover:border-border hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)]"
             >
               <div className="aspect-square h-full rounded-lg overflow-hidden bg-muted flex max-h-32">
                 {award.imageSource ? (
@@ -78,7 +78,7 @@ const AwardsSection = () => {
                 <MutedText text={award.period} />
                 <h3 className="text-lg font-semibold">{award.title}</h3>
                 <p className="text-sm text-muted-foreground">{award.summary}</p>
-                <Badge className="bg-green-100 text-green-800 text-sm font-semibold mt-2 px-3 py-1">
+                <Badge className="bg-green-300 dark:bg-green-200 text-green-800 text-sm font-semibold mt-2 px-3 py-1">
                   🥇 {award.place}
                 </Badge>
               </div>

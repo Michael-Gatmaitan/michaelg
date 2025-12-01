@@ -8,12 +8,12 @@ const getLevelColor = (level: number): string => {
   // Tailwind classes for different contribution levels
   // Adjust colors to match your site's theme
   switch (level) {
-    case 0: return 'bg-gray-100 dark:bg-gray-800'; // No contributions
+    case 0: return 'bg-gray-200 dark:bg-gray-800'; // No contributions
     case 1: return 'bg-green-200 dark:bg-green-900'; // Low
     case 2: return 'bg-green-400 dark:bg-green-700'; // Medium
     case 3: return 'bg-green-600 dark:bg-green-500'; // High
     case 4: return 'bg-green-800 dark:bg-green-300'; // Very high
-    default: return 'bg-gray-100 dark:bg-gray-800';
+    default: return 'bg-gray-200 dark:bg-gray-800';
   }
 };
 
@@ -42,7 +42,7 @@ export function ContributionGraph({ data, totalContributions, isLoading }: Contr
         {data.map((day) => (
           <div
             key={day.date}
-            className={`w-3 h-3 rounded-sm ${getLevelColor(day.level)}`}
+            className={`w-3 h-3 rounded-xs ${getLevelColor(day.level)}`}
             title={`${day.count} contribution${day.count !== 1 ? 's' : ''} on ${day.date}`} // Tooltip
           />
         ))}

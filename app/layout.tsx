@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased cursor-gradient bg-[radial-gradient(#eee_1px,transparent_1px)] dark:bg-[radial-gradient(#121212_1px,transparent_1px)] bg-size-[16px_16px]`}
+        className={`${inter.className} antialiased cursor-gradient bg-[radial-gradient(#ccc_1px,transparent_1px)] dark:bg-[radial-gradient(#202020_1px,transparent_1px)] bg-size-[16px_16px]`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <CursorGradient />
