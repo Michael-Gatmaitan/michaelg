@@ -57,7 +57,7 @@ const AwardsSection = () => {
           {awards.map((award) => (
             <div
               key={award.id}
-              className="flex items-center rounded-3xl p-4 border border-gray-400/50 dark:border-gray-600/50 bg-background/60 shadow-[0_0_40px_rgba(0,0,0,0.05)] transition hover:border-border hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)]"
+              className="flex items-center rounded-3xl p-4 border border-border/60 bg-background/60 shadow-[0_0_40px_rgba(0,0,0,0.05)] transition hover:border-border hover:shadow-[0_10px_40px_rgba(0,0,0,0.15)]"
             >
               <div className="aspect-square h-full rounded-lg overflow-hidden bg-muted flex max-h-32">
                 {award.imageSource ? (

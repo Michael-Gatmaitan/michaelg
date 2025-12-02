@@ -104,12 +104,12 @@ const ProjectsSection = () => {
           <MutedText text="Projects" />
           <h2 className="text-2xl font-semibold">Work that translates ideas into results</h2>
         </div>
-        <Button variant="outline" asChild>
+        {/* <Button variant="outline" asChild>
           <Link href="https://github.com/Michael-Gatmaitan" target="_blank" rel="noreferrer">
             <Github className="size-4" />
             My GitHub Profile
           </Link>
-        </Button>
+        </Button> */}
       </div>
       <div className="space-y-6">
         {projects.map((project) => (
