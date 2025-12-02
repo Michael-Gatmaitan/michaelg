@@ -48,9 +48,9 @@ const SideBar = () => {
         isOpen &&
         <motion.div
           key="sidebar"
-          initial={{ opacity: 0, scale: 0.7, y: -20, borderRadius: '0px' }}
-          animate={{ opacity: 1, scale: 1, y: 0, borderRadius: 0 }}
-          exit={{ opacity: 0, scale: 0.7, y: -20, borderRadius: '0px' }}
+          initial={{ opacity: 0, scale: 0.7, y: -20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.7, y: -20 }}
           transition={{ ease: "backInOut", duration: 0.2 }}
           className="max-h-dvh h-dvh fixed flex flex-col items-center justify-center w-full top-0 z-100 lg:hidden px-4 sm:px-8 lg:px-0 bg-white/10 dark:bg-black/20 backdrop-blur-md"
         >
@@ -68,9 +68,9 @@ const SideBar = () => {
             ))}
           </div>
 
-          <div className="space-y-3 absolute left-4 bottom-4">
+          <div className="space-y-3 absolute px-4 pb-4 bottom-0 left-0 w-full">
             <MutedText text="Socials" />
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3 justify-start">
               {socials.map(({ id, href, Icon }) => (
                 <Button key={id} variant="outline" size="icon-lg" asChild>
                   <Link href={href} target="_blank">
