@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     BASE_URL: process.env.BASE_URL,
     GITHUB_ACCESS_TOKEN_COMMIT_GRAPH:
       process.env.GITHUB_ACCESS_TOKEN_COMMIT_GRAPH,
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
   },
 };
 
