@@ -5,7 +5,7 @@ import { useChatStore } from "@/stores/chatStore";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { AnimatePresence, motion } from "motion/react";
-import { MessageCircle, X, Send, Bot, User, Trash2 } from "lucide-react";
+import { MessageCircle, X, Send, Bot, User, Trash2, BotMessageSquare } from "lucide-react";
 
 const ChatBot = () => {
   const { isOpen, messages, isLoading, toggleChat, addMessage, setLoading, clearMessages } = useChatStore();
@@ -87,7 +87,7 @@ const ChatBot = () => {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 260, damping: 20, duration: 0.05 }}
+            transition={{ type: "spring", duration: 0.2 }}
             className="fixed bottom-6 right-6 z-50"
           >
             <Button
@@ -96,7 +96,8 @@ const ChatBot = () => {
               className="rounded-full shadow-lg hover:shadow-xl transition-shadow bg-primary hover:bg-primary/90"
               aria-label="Open chat"
             >
-              <MessageCircle className="size-6" />
+              {/* <MessageCircle className="size-6" /> */}
+              <BotMessageSquare className="size-6" />
             </Button>
           </motion.div>
         )}
@@ -109,7 +110,7 @@ const ChatBot = () => {
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30, duration: 0.05 }}
+            transition={{ type: "spring", duration: 0.2 }}
             className="fixed inset-0 z-50 flex flex-col h-dvh max-h-dvh w-screen rounded-none overflow-hidden border border-border/60 bg-background/95 backdrop-blur-md shadow-2xl dark:bg-background/90 sm:bottom-6 sm:right-6 sm:inset-auto sm:w-[90vw] sm:max-w-md sm:h-[600px] sm:max-h-[80vh] sm:rounded-2xl"
           >
             {/* Chat Header */}
@@ -152,7 +153,7 @@ const ChatBot = () => {
                 <div className="flex flex-col items-center justify-center h-full text-center px-4">
                   <Bot className="size-12 text-muted-foreground/50 mb-4" />
                   <p className="text-sm text-muted-foreground">
-                    Hi! Im your AI assistant. How can I help you today?
+                    Hi! Im your AI assistant. Ask anything about Michael.
                   </p>
                 </div>
               ) : (
@@ -207,7 +208,7 @@ const ChatBot = () => {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Type your message..."
+                  placeholder="Ask about Projects, Awards, etc..."
                   disabled={isLoading}
                   className="flex-1"
                 />

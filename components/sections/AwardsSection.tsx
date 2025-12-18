@@ -1,4 +1,3 @@
-import React from 'react'
 import MutedText from '../muted-text'
 import Image from 'next/image'
 import { Badge } from '../ui/badge'
