@@ -1,4 +1,5 @@
-export const aiModel = "gemini-2.0-flash";
+// export const aiModel = "gemini-2.0-flash";
+export const aiModel = "gemini-2.5-flash-lite";
 
 // AI System Instruction
 export const systemMessage = `

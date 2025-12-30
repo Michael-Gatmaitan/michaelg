@@ -39,6 +39,8 @@ export async function POST(req: NextRequest) {
       })
     );
 
+    console.log(chatHistory);
+
     // Start chat with history if available
     const chat = model.startChat({
       history: chatHistory,
